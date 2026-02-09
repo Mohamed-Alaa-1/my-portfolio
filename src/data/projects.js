@@ -1,13 +1,13 @@
 import React from 'react';
-import { Activity, Cpu, Terminal, Server, Database, Eye, Code2 } from 'lucide-react';
+import { Activity, Cpu, Terminal, Server, Database, Eye, Code2, Zap } from 'lucide-react';
 
 export const projects = [
   {
     id: "auravit",
-    title: "AuraVIT",
-    subtitle: "Federated Learning Framework for Medical Imaging",
-    description: "A professional, modular framework for Federated Learning (FL) in medical image segmentation, specifically for Lung Segmentation. It introduces the AuraViT family of models (Lightweight & Stable) and implements advanced FL strategies.",
-    fullContent: "\n# Project Overview\n**AuraVIT** is a cutting-edge Federated Learning framework designed for medical image analysis. It addresses the critical challenge of training robust deep learning models on sensitive patient data without compromising privacy.\n\n## Key Features\n*   **Custom Models:** \n    *   *Lightweight AuraViT:* Efficient Hybrid CNN-Transformer optimized for edge devices. \n    *   *Stable AuraViT:* High-capacity model with enhanced stability for complex segmentation tasks. \n*   **Advanced Federated Learning:**\n    *   **Federated Ensemble Learning:** Trains multiple models on disjoint client subsets to boost diversity. \n    *   **Federated Transfer Learning:** Enables fine-tuning of pre-trained models on local client data with encoder freezing. \n    *   **Robustness:** Includes drift detection and adaptive aggregation strategies. \n\n## Technology Stack\n*   **Core:** Python 3.8+, PyTorch\n*   **Architecture:** Hybrid Vision Transformers (ViT) + CNN\n*   **FL Strategies:** FedAvg, FedProx, Custom Ensemble Methods\n\n## Impact\nThis framework facilitates collaboration between hospitals by allowing them to jointly train AI models without ever sharing raw patient images, preserving patient privacy while improving diagnostic accuracy.\n    ",
+    title: "AuraViT-FL",
+    subtitle: "Federated Learning Framework for Lung Tumor Segmentation",
+    description: "A professional, modular framework for Federated Learning (FL) in medical image segmentation. It features the AuraViT suite (Standard & Lightweight LAURA models) and implements advanced strategies like Federated Bagging and Transfer Learning.",
+    fullContent: "\n# Project Overview\n**AuraViT-FL** is a cutting-edge Federated Learning framework designed for privacy-preserving medical image analysis. It addresses the critical challenge of training robust deep learning models on sensitive patient data without compromising privacy, specifically for lung tumor segmentation in CT scans.\n\n**[Read the Official Paper](https://www.mdpi.com/2504-4990/8/2/34)**\n\n## Key Features\n*   **AuraViT Suite:**\n    *   **Standard AuraViT:** A hybrid model (136M parameters) combining Vision Transformers (ViT) with Atrous Spatial Pyramid Pooling (ASPP) and attention-gated residuals.\n    *   **LAURA Family:** Lightweight variants (Small, Tiny, Mobile) designed for edge deployment, with the Mobile variant (~5M parameters) reducing complexity by >96% while maintaining competitive accuracy.\n*   **Advanced Federated Learning:**\n    *   **Privacy-First:** Uses FedProx and adaptive weighted aggregation to train on decentralized data.\n    *   **Robustness:** Implements dynamic virtual client partitioning and drift detection to handle data heterogeneity.\n    *   **Advanced Modes:** Supports Federated Ensemble Learning (Bagging) and Transfer Learning.\n\n## Technology Stack\n*   **Core:** Python 3.8+, PyTorch, Monai\n*   **Architecture:** Hybrid ViT + CNN (AuraViT, LAURA)\n*   **FL Strategies:** FedProx, Adaptive Aggregation, Cosine Similarity Weighting\n\n## Impact\nAuraViT-FL achieves a global mean Dice score of **80.81%**, performance comparable to centralized training, enabling hospitals to collaborate securely. The framework is published in *Multimodal Technologies and Interaction*.\n    ",
     tags: ["Python", "PyTorch", "Federated Learning", "Medical AI", "Computer Vision"],
     link: "https://github.com/Mohamed-Alaa-1/AuraVIT",
     icon: Activity
@@ -31,6 +31,16 @@ export const projects = [
     tags: ["Python", "Scikit-Learn", "Data Science", "ML", "FastF1"],
     link: "https://github.com/Mohamed-Alaa-1/f1-predictor",
     icon: Terminal
+  },
+  {
+    id: "mips-dsp",
+    title: "MIPS DSP Processor",
+    subtitle: "Hardware Design of a RISC CPU",
+    description: "A Verilog implementation of a MIPS single-cycle processor, architecturally extended with a specialized Digital Signal Processing (DSP) unit.",
+    fullContent: "\n# Project Overview\nThis hardware engineering project involves the design and simulation of a 32-bit MIPS processor. The core innovation is the integration of a custom **DSP Unit** within the datapath to accelerate mathematical operations common in signal processing. \n\n## Architecture\n*   **Single-Cycle:** Executes one instruction per clock cycle. \n*   **Components:** \n    *   32-bit ALU and Register File. \n    *   Instruction & Data Memory modules. \n    *   **DSP Extension:** Dedicated hardware for Multiply-Accumulate (MAC) operations. \n\n## Verification\nThe design was verified using **Xilinx Vivado**. Testbenches were written to validate individual control signals and the execution of complex assembly programs. \n\n## Tech Stack\n*   **HDL:** Verilog\n*   **Tools:** Xilinx Vivado, ModelSim\n*   **Architecture:** MIPS32\n    ",
+    tags: ["Verilog", "FPGA", "Hardware Design", "Computer Arch"],
+    link: "https://github.com/Mohamed-Alaa-1/mips-single-cycle-with-dsp-unit",
+    icon: Code2
   },
   {
     id: "nids-federated",
@@ -63,13 +73,13 @@ export const projects = [
     icon: Eye
   },
   {
-    id: "mips-dsp",
-    title: "MIPS DSP Processor",
-    subtitle: "Hardware Design of a RISC CPU",
-    description: "A Verilog implementation of a MIPS single-cycle processor, architecturally extended with a specialized Digital Signal Processing (DSP) unit.",
-    fullContent: "\n# Project Overview\nThis hardware engineering project involves the design and simulation of a 32-bit MIPS processor. The core innovation is the integration of a custom **DSP Unit** within the datapath to accelerate mathematical operations common in signal processing. \n\n## Architecture\n*   **Single-Cycle:** Executes one instruction per clock cycle. \n*   **Components:** \n    *   32-bit ALU and Register File. \n    *   Instruction & Data Memory modules. \n    *   **DSP Extension:** Dedicated hardware for Multiply-Accumulate (MAC) operations. \n\n## Verification\nThe design was verified using **Xilinx Vivado**. Testbenches were written to validate individual control signals and the execution of complex assembly programs. \n\n## Tech Stack\n*   **HDL:** Verilog\n*   **Tools:** Xilinx Vivado, ModelSim\n*   **Architecture:** MIPS32\n    ",
-    tags: ["Verilog", "FPGA", "Hardware Design", "Computer Arch"],
-    link: "https://github.com/Mohamed-Alaa-1/mips-single-cycle-with-dsp-unit",
-    icon: Code2
+    id: "electric-car",
+    title: "Electric Car for EVER",
+    subtitle: "Competition-Grade EV Manufacturing",
+    description: "Contributed to the manufacturing and control system design of an electric vehicle for the EVER competition.",
+    fullContent: "\n# Project Overview\nParticipated in the design and manufacturing of an electric vehicle (EV) for the **EVER Competition**. \n\n## Role & Contributions\n*   **Manufacturing:** Assisted in the chassis assembly and mechanical integration of the powertrain.\n*   **Control Systems:** Contributed to the design of the vehicle control unit (VCU) interfaces and wiring harnesses.\n*   **Teamwork:** Collaborated with a multidisciplinary team of mechanical and electrical engineers to ensure vehicle compliance with competition safety standards.\n\n## Tech Stack\n*   **Hardware:** Motor Controllers, Battery Management Systems (BMS)\n*   **Tools:** CAD, Electrical Schematics\n    ",
+    tags: ["Hardware", "EV", "Control Systems", "Teamwork"],
+    link: "#",
+    icon: Zap
   }
 ];

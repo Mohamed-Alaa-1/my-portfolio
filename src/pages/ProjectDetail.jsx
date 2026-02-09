@@ -85,15 +85,22 @@ const ProjectDetail = () => {
             <div className="mt-12 pt-8 border-t border-navy-700">
               <h3 className="text-lg font-bold text-slate-100 mb-4">Ready to see the code?</h3>
               <div className="flex flex-wrap gap-4">
-                 <a 
-                  href={project.link} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="flex items-center px-6 py-3 bg-teal-400/10 text-teal-400 border border-teal-400 rounded hover:bg-teal-400 hover:text-navy-900 transition-all duration-300 font-medium"
-                >
-                  <Github size={20} className="mr-2" />
-                  View Repository
-                </a>
+                 {project.link && project.link !== "#" ? (
+                   <a 
+                    href={project.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="flex items-center px-6 py-3 bg-teal-400/10 text-teal-400 border border-teal-400 rounded hover:bg-teal-400 hover:text-navy-900 transition-all duration-300 font-medium"
+                  >
+                    <Github size={20} className="mr-2" />
+                    View Repository
+                  </a>
+                 ) : (
+                   <span className="text-slate-500 italic flex items-center">
+                     <Github size={20} className="mr-2 opacity-50" />
+                     Repository not public due to NDA / Competition rules.
+                   </span>
+                 )}
               </div>
             </div>
           </motion.div>
