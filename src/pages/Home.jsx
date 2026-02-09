@@ -115,13 +115,12 @@ const Home = () => {
               I recently graduated with a B.E. in Electrical & Computer Engineering from <span className="text-teal-300">Nile University</span> (GPA 3.7). My main focus these days is building privacy-preserving Federated Learning frameworks like <strong>AuraViT-FL</strong>.
             </p>
           </div>
-          <div className="relative group">
-             <div className="absolute inset-0 border-2 border-teal-400 rounded translate-x-4 translate-y-4 transition-transform group-hover:translate-x-2 group-hover:translate-y-2"></div>
-             <div className="relative bg-navy-700 rounded overflow-hidden aspect-square flex items-center justify-center">
+          <div className="flex justify-center">
+             <div className="relative rounded-lg overflow-hidden shadow-2xl max-w-sm aspect-square">
                 <img 
                   src="mypic.jpeg" 
                   alt="Mohamed Alaa" 
-                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                  className="w-full h-full object-cover"
                 />
              </div>
           </div>
