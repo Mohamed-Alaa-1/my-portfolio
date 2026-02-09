@@ -50,7 +50,7 @@ const Home = () => {
                 </button>
               ))}
               <a 
-                href="/Rusme.pdf" 
+                href="/Resume.pdf" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-4 py-2 text-sm font-mono text-teal-400 border border-teal-400 rounded hover:bg-teal-400/10 transition-colors"
@@ -118,8 +118,11 @@ const Home = () => {
           <div className="relative group">
              <div className="absolute inset-0 border-2 border-teal-400 rounded translate-x-4 translate-y-4 transition-transform group-hover:translate-x-2 group-hover:translate-y-2"></div>
              <div className="relative bg-navy-700 rounded overflow-hidden aspect-square flex items-center justify-center">
-                {/* Placeholder for Profile Image */}
-                <span className="text-6xl">👨‍💻</span>
+                <img 
+                  src="/mypic.jpeg" 
+                  alt="Mohamed Alaa" 
+                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                />
              </div>
           </div>
         </div>
@@ -296,9 +299,6 @@ const Home = () => {
           <a href="https://github.com/Mohamed-Alaa-1" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-teal-400 transition-colors"><Github size={22} /></a>
           <a href="https://linkedin.com/in/mohamed-alaa-806a5a266" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-teal-400 transition-colors"><Linkedin size={22} /></a>
         </div>
-        <p className="text-slate-500 text-xs font-mono">
-          Built with React & Tailwind by Mohamed Alaa
-        </p>
       </footer>
 
     </div>
