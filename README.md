@@ -1,17 +1,16 @@
 # 🌐 Professional Portfolio Website
 
-A modern, high-performance portfolio website built for a Computer Engineer. It features a sleek "Navy" aesthetic, smooth animations, and a responsive design to showcase projects, skills, and experience.
-
-![Portfolio Preview](https://via.placeholder.com/800x400?text=Portfolio+Preview)
+A modern, high-performance portfolio website built for a Computer Engineer. It features a sleek "Navy" aesthetic, smooth animations, and a recruiter-focused design to showcase projects, skills, and experience.
 
 ## ✨ Features
 
-*   **Single-Page Application (SPA):** Smooth scrolling and seamless navigation using React Router.
-*   **Rich Project Showcases:** dedicated detail pages for each project with Markdown rendering for deep-dive case studies.
-*   **Professional Design:** Custom Navy Blue color scheme with Teal accents, built with Tailwind CSS v4.
-*   **Responsive:** Fully optimized for mobile, tablet, and desktop screens.
-*   **Animations:** polished entrance and scroll animations using Framer Motion.
-*   **Dynamic Content:** Data-driven architecture makes it easy to add new projects or update experience.
+*   **Professional Navigation:** Shared `Navbar` component with intelligent cross-page section scrolling.
+*   **UX-Focused:** Integrated scroll restoration logic to preserve user context when navigating back from project details.
+*   **SEO & Social Ready:** Optimized with Meta and Open Graph (OG) tags for high-quality link previews on LinkedIn and WhatsApp.
+*   **Modular Data Architecture:** Decoupled content (projects, experience, skills) into dedicated data modules for easy maintenance.
+*   **AuraViT-FL Integration:** Features deep-dive documentation for the published AuraViT-FL research project.
+*   **Rich Case Studies:** Dedicated detail pages for each project with Markdown rendering for technical deep-dives.
+*   **Animations:** Polished entrance and scroll animations using Framer Motion.
 
 ## 🛠️ Tech Stack
 
@@ -45,7 +44,6 @@ A modern, high-performance portfolio website built for a Computer Engineer. It f
     ```bash
     npm run dev
     ```
-    The site will be available at `http://localhost:5173`.
 
 ## 📦 Deployment (GitHub Pages)
 
@@ -68,18 +66,16 @@ This project is pre-configured for free hosting on GitHub Pages.
 
 ```
 src/
-├── components/      # Reusable UI components
-├── data/           # content files (projects.js)
-├── pages/          # Page views (Home.jsx, ProjectDetail.jsx)
-├── App.jsx         # Main router setup
-└── index.css       # Tailwind CSS imports and custom themes
+├── components/      # Shared UI (Navbar.jsx)
+├── data/            # Modular content (projects.js, experience.js, skills.js)
+├── pages/           # Page views (Home.jsx, ProjectDetail.jsx)
+├── App.jsx          # Main router and 404 setup
+└── index.css        # Tailwind v4 theme and custom styles
 ```
 
 ## 📝 Customization
 
-*   **Projects:** Edit `src/data/projects.js` to add or modify project details.
-*   **Personal Info:** Update `src/pages/Home.jsx` to change the Bio, Experience, or Education sections.
+*   **Content:** Edit files in `src/data/` to add or modify projects, experience, or skills.
+*   **Personal Info:** Update `src/pages/Home.jsx` to change the Bio or Education sections.
 *   **Theme:** Modify CSS variables in `src/index.css` to change the color palette.
 
----
-*Built with ❤️ by Mohamed Alaa*
