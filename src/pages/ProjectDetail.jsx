@@ -14,19 +14,9 @@ const ProjectDetail = () => {
   }
 
   return (
-    <div className="min-h-screen bg-navy-900 text-slate-300 font-sans selection:bg-navy-700 selection:text-teal-300">
+    <div className="min-h-screen bg-navy-900 text-slate-300 font-sans selection:bg-navy-700 selection:text-teal-300 pt-20">
       
-      {/* Navigation */}
-      <nav className="fixed w-full z-50 bg-navy-900/90 backdrop-blur-md border-b border-navy-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <Link to="/" className="flex items-center text-teal-400 hover:text-teal-300 transition-colors font-mono text-sm">
-              <ArrowLeft size={16} className="mr-2" />
-              Back to Portfolio
-            </Link>
-          </div>
-        </div>
-      </nav>
+      {/* Navigation handled by shared Navbar */}
 
       {/* Hero Banner with Abstract Pattern */}
       <div className="relative h-[40vh] min-h-[300px] w-full bg-navy-800 overflow-hidden flex items-center justify-center">
@@ -52,6 +42,13 @@ const ProjectDetail = () => {
 
       <main className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto -mt-20 relative z-30 pb-20">
         
+        <div className="mb-8">
+          <Link to="/#projects" className="inline-flex items-center text-teal-400 hover:text-teal-300 transition-colors font-mono text-sm group">
+            <ArrowLeft size={16} className="mr-2 group-hover:-translate-x-1 transition-transform" />
+            Back to Projects
+          </Link>
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           
           {/* Main Content Column (8 cols) */}

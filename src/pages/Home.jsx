@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Github, ExternalLink, BookOpen, Code, Briefcase, Mail, Linkedin, Smartphone, FileText } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { projects } from '../data/projects';
 import { experience } from '../data/experience';
 import { skills, certifications } from '../data/skills';
@@ -20,6 +20,22 @@ const item = {
 };
 
 const Home = () => {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      const id = hash.replace('#', '');
+      const element = document.getElementById(id);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [hash]);
+
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
@@ -30,37 +46,7 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-navy-900 text-slate-300 font-sans selection:bg-navy-700 selection:text-teal-300">
       
-      {/* Navigation */}
-      <nav className="fixed w-full z-50 bg-navy-900/90 backdrop-blur-md border-b border-navy-800 transition-all duration-300">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
-            <div className="flex items-center">
-              <span className="text-xl font-bold text-teal-400 tracking-tight border border-teal-400 p-2 rounded-md hover:bg-teal-400/10 transition-colors cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-                MA
-              </span>
-            </div>
-            <div className="hidden md:flex items-center space-x-8">
-              {['About', 'Experience', 'Projects', 'Skills'].map((item, index) => (
-                <button 
-                  key={item}
-                  onClick={() => scrollToSection(item.toLowerCase())} 
-                  className="text-sm font-mono text-slate-300 hover:text-teal-400 transition-colors"
-                >
-                  <span className="text-teal-400 mr-1">0{index + 1}.</span>{item}
-                </button>
-              ))}
-              <a 
-                href="Resume.pdf" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 text-sm font-mono text-teal-400 border border-teal-400 rounded hover:bg-teal-400/10 transition-colors"
-              >
-                Resume
-              </a>
-            </div>
-          </div>
-        </div>
-      </nav>
+      {/* Navigation removed - handled by App.jsx shared Navbar */}
 
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center pt-20 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
